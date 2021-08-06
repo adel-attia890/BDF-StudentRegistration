@@ -1,0 +1,9 @@
+app:
+  secret-key: SECRET #JWT secret key
+  token-validity-minutes: 10 #JWT token validity time in minutes
+
+spring:
+  application:
+    name: '@project.artifactId@'
+  profiles:
+    active: @spring-active-profile@ #dev or uat; dev uses h2 in memory db, uat uses oracle db

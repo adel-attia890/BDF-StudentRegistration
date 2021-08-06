@@ -1,0 +1,42 @@
+#--------------- Spring Properties - Start ---------------#
+spring:
+
+  #DB Configuration
+  jpa:
+    #Show executed SQL queries in console
+    show-sql: true
+
+    #Hibernate configuration
+    hibernate:
+      #Schema handling strategy
+      ddl-auto: create
+
+      #The SQL dialect makes Hibernate generates better/optimized SQL queries for the chosen database
+      dialect: org.hibernate.dialect.Oracle12cDialect
+
+      #Pretty print the logged SQL queries
+      format-sql: false
+
+  datasource:
+    #DB connectivity details
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: "jdbc:oracle:thin:@localhost:1521:xe"
+    username: system
+    password: admin
+
+
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+
+#--------------- Spring Properties - End ---------------#
+
+#--------------- Logging Properties - Start ---------------#
+#Hibernate logging
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+#--------------- Logging Properties - End ---------------#
