@@ -40,7 +40,8 @@ Project is created using below stack:
 ### Deploy to Weblogic
 
 * Deployment steps
-    - Via terminal, run maven command `mvn clean package -P[profile]`, where [Profile](#Profiles) represents spring profile.
+    - Via terminal, run maven command `mvn clean package`.
+        - You can specify profile using maven command `mvn clean package -P[profile]`, where [Profile](#Profiles) represents spring profile.
     - Use generated war under `/target` for Weblogic deployment
 
 ## Profiles
